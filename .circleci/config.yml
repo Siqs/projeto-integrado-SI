@@ -10,9 +10,9 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Bundler
           cammand: |
-            gem install bundler -v  2.1.4
+            gem install bundler:2.1.4
             bundle install
-          name: Which bundler?
-          command: bundle -v
+            bundle -v
       - ruby/bundle-install
